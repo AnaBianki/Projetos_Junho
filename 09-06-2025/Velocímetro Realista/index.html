@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velocímetro Realista</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🚘 Velocímetro</h1>
+            <button id="toggleTheme">🌙</button>
+        </header>
+        <div class="velocimetro">
+            <div class="marcador" id="marcador">0 km/h</div>
+            <div class="painel">
+                <div class="ticks">
+                </div>
+                <div class="ponteiro" id="ponteiro"></div>
+                <div class="marcas-circulares">
+                    <span style="--i: 0;">0</span>
+                    <span style="--i: 1;">10</span>
+                    <span style="--i: 2;">20</span>
+                    <span style="--i: 3;">30</span>
+                    <span style="--i: 4;">40</span>
+                    <span style="--i: 5;">50</span>
+                    <span style="--i: 6;">60</span>
+                    <span style="--i: 7;">70</span>
+                    <span style="--i: 8;">80</span>
+                    <span style="--i: 9;">90</span>
+                    <span style="--i: 10;">100</span>
+                </div>
+            </div>
+        </div>
+        <div class="pedais">
+            <div class="pedal" id="pedal-acelerador">
+                <span>Acelerar</span> 
+            </div>
+            <div class="pedal" id="pedal-freio">
+                <span>Frear</span>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

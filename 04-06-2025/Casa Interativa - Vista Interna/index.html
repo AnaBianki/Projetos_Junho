@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Casa Interativa - Vista Interna</title>
+</head>
+<body>
+    <div class="casa">
+        <div class="telhado"></div>
+        <div class="parede">
+            <div id="luz-teto" class="luz-teto"></div>
+            <div class="moveis">
+                <div class="sofa"></div>
+                <div class="mesa">
+                    <div id="abajur" class="abajur">
+                        <div class="abajur-base"></div>
+                        <div class="abajur-cupula"></div>
+                    </div>
+                </div>
+                <div id="tv" class="tv"></div>
+            </div>
+            <div class="janela" id="janela1">
+                <div class="cortina"></div>
+            </div>
+            <div class="janela" id="janela2">
+                <div class="cortina"></div>
+            </div>
+            <div class="porta" id="porta"></div>
+        </div>
+    </div>
+    <div class="controles">
+        <button onclick="toggleLuzes()">Ligar/Desligar Luzes</button>
+        <button onclick="togglePorta()">Abrir/Fechar Porta</button>
+        <button onclick="toggleTV()">Ligar/Desligar TV</button>
+        <button onclick="toggleLuzTeto()">Luz do Teto</button>
+        <button onclick="toggleCortinas()">Abrir/Fechar Cortina</button>
+        <button onclick="toggleAbajur()">Ligar/Desligar Abajur</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

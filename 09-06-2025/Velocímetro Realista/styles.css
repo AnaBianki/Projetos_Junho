@@ -1,0 +1,206 @@
+:root {
+    --bg: #1b1b1b;
+    --text: #f4f4f4;
+    --card: #262626;
+    --accent: #00bcd4;
+}
+
+body.dark {
+    --bg: #fff;
+    --text: #222;
+    --card: #eee;
+    --accent: #007bff;
+}
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background: var(--card);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    width: 320px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    margin: 0;
+    font-size: 1.4rem;
+}
+
+#toggleTheme {
+    font-size: 1.2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--text);
+}
+
+.velocimetro {
+    margin: 30px 0;
+}
+
+.marcador {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.painel {
+    width: 300px;
+    height: 150px;
+    background-color: #1a1a1a;
+    border-radius: 150px 150px 0 0;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+}
+
+.ponteiro {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    width: 7px;
+    height: 135px;
+    background: red;
+    border-radius: 3.5px;
+    transform-origin: bottom center;
+    transform: rotate(-90deg);
+    transition: transform 0.3s ease-in-out;
+    z-index: 10;
+    box-shadow: 0 0 20px rgba(255,0,0,0.8);
+}
+
+.marcas-circulares {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 300px;
+    height: 150px;
+    pointer-events: none;
+    transform: translateX(-50%);
+}
+
+.marcas-circulares span {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform-origin: bottom center;
+    width: 20px;
+    height: 150px;
+    text-align: center;
+    font-size: 0.9em;
+    font-weight: bold;
+    color: #ffffff;
+
+    transform: translateX(-50%) rotate(calc(var(--i) * 18deg - 90deg));
+    padding-top: 10px;
+}
+
+.ticks {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 300px;
+    height: 150px;
+    pointer-events: none;
+    z-index: 5;
+    transform: translateX(-50%);
+}
+
+.ticks span {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform-origin: bottom center;
+    width: 2px;
+    height: 150px;
+
+    transform: translateX(-50%) rotate(calc(var(--i) * 18deg - 90deg));
+}
+
+.ticks span::before {
+    content: '';
+    display: block;
+    width: 2px;
+    height: 10px;
+    background-color: #ffffff;
+    margin: 5px auto 0;
+}
+
+.ticks span:nth-child(2n+1)::before {
+    height: 15px;
+    width: 3px;
+}
+
+.ticks::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 2px;
+    height: 12px;
+    background: var(--text);
+    transform-origin: bottom center;
+
+    transform: rotate(calc(-90deg + var(--i) * 18deg)) translateY(-105px);
+    opacity: 0.7;
+}
+
+.pedais {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    margin-top: 30px;
+    padding: 0 20px;
+}
+
+.pedal {
+    width: 70px;
+    height: 120px;
+    background-color: #444;
+    border: 2px solid #222;
+    border-radius: 10px 10px 5px 5px;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.1s ease-out, background-color 0.1s ease-out;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.pedal span {
+    color: #ccc;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+.pedal:hover {
+    background-color: #555;
+}
+
+.pedal:active {
+    transform: translateY(5px) scale(0.95);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+#pedal-acelerador {
+    background-color: #3a3a3a;
+}
+#pedal-freio {
+    background-color: #5a2a2a;
+}

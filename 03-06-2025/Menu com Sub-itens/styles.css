@@ -1,0 +1,99 @@
+:root {
+    --bg: #f9f9f9;
+    --text: #222;
+    --menu: #fff;
+    --accent: #007bff;
+}
+
+body.dark {
+    --bg: #121212;
+    --text: #eee;
+    --menu: #1e1e1e;
+    --accent: #00bcd4;
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: sans-serif;
+}
+
+header {
+    background: var(--menu);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+button#toggleTheme  {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    color: var(--text);
+    cursor: pointer;
+}
+
+.menu {
+    max-width: 400px;
+    margin: 30px auto;
+    background: var(--menu);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu .item {
+    margin-bottom: 10px;
+}
+
+.menu .pai {
+    width: 100%;
+    text-align: left;
+    background: var(--accent);
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.menu .sub {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.4s;
+    background: var(--menu);
+    border-left: 3px solid var(--accent);
+    margin-top: 5px;
+    border-radius: 4px;
+}
+
+.menu .sub a {
+    display: block;
+    padding: 8px 12px;
+    text-decoration: none;
+    color: var(--text);
+    border-bottom: 1px solid #ccc3;
+}
+
+.menu .sub a:hover {
+    background: #eee3;
+}
+
+.menu .item.ativo .sub {
+    max-height: 300px;
+}

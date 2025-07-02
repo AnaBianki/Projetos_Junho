@@ -1,0 +1,65 @@
+:root {
+    --bg: #f0f0f0;
+    --text: #222;
+    --card: #fff;
+    --accent: #007bff;
+}
+
+body.dark {
+    --bg: #121212;
+    --text: #eee;
+    --card: #1e1e1e;
+    --accent: #00bcd4;
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+    background: var(--card);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+.moeda {
+    font-size: 4rem;
+    margin: 20px 0;
+    height: 100px;
+    line-height: 100px;
+    border: 2px dashed var(--accent);
+    border-radius: 50%;
+    width: 100px;
+    margin-inline: auto;
+    transition: 0.3s;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 10px 5px;
+    font-size: 1rem;
+    background: var(--accent);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+.resultado {
+    margin-top: 15px;
+    font-weight: bold;
+}

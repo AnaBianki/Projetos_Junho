@@ -1,0 +1,65 @@
+:root {
+    --bg: #f5f5f5;
+    --text: #222;
+    --card: #ffffff;
+    --accent: #009688;
+}
+body.dark {
+    --bg: #121212;
+    --text: #eeeeee;
+    --card: #1e1e1e;
+    --accent: #00bcd4;
+}
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container {
+    background: var(--card);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    text-align: center;
+    width: 320px;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+h1 {
+    margin: 0;
+    font-size: 1.4rem;
+}
+#toggleTheme {
+    font-size: 1.3rem;
+    background: none;
+    border: none;
+    color: var(--text);
+    cursor: pointer;
+}
+#display {
+    margin-top: 30px;
+}
+.tecla {
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 20px;
+    border: 2px dashed var(--accent);
+    border-radius: 10px;
+    margin-bottom: 20px;
+    transition: all 0.2s ease;
+}
+.info p {
+    margin: 4px 0;
+}
+
+
+
+

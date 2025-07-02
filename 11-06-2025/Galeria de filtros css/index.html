@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Galeria com Filtros</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>🖼️ Galeria com Filtros CSS</h1>
+
+    <div class="botoes">
+        <button onclick="aplicarFiltro('none')">Original</button> 
+        <button onclick="aplicarFiltro('grayscale(100%)')">Preto e Branco</button> 
+        <button onclick="aplicarFiltro('sepia(100%)')">Sépia</button> 
+         <button onclick="aplicarFiltro('blur(3px)')">Desfoque</button> 
+      </div>
+      <div class="galeria" id="galeria">
+        <img src="img/foto1.jpg" alt="Foto 1">
+        <img src="img/foto2.jpg" alt="Foto 2">
+        <img src="img/foto3.jpg" alt="Foto 3">
+      </div>
+      <script src="script.js"></script>
+</body>
+</html>

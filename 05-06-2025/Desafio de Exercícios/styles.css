@@ -1,0 +1,85 @@
+
+
+:root {
+    --bg: #fefefe;
+    --text: #1c1c1e;
+    --card: #ffffff;
+    --accent: #6366f1;
+    --shadow: rgba(0, 0, 0, 0.05);
+}
+body.dark {
+    --bg: #1e1e1e;
+    --text: #f1f1f1;
+    --card: #2c2c2e;
+    --accent: #8b5cf6;
+    --shadow: rgba(255, 255, 255, 0.05);
+}
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+.container {
+    max-width: 480px;
+    background: var(--card);
+    padding: 40px 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px var(--shadow);
+    width: 100%;
+    text-align: center;
+    transition: background 0.3s ease;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+h1 {
+    margin: 0;
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+#toggleTheme {
+    font-size: 1.4rem;
+    background: transparent;
+    border: 2px solid var(--accent);
+    color: var(--accent);
+    padding: 6px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+#toggleTheme:hover {
+    background: var(--accent);
+    color: white;
+}
+.desafio {
+    margin: 40px 0;
+    font-size: 1.4rem;
+    font-weight: 500;
+    min-height: 60px;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+#sortearBtn {
+    background: var(--accent);
+    color: #ffffff;
+    border: none;
+    padding: 14px 24px;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+#sortearBtn:hover {
+    background: #4f46e5;
+}

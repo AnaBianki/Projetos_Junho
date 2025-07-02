@@ -1,0 +1,51 @@
+:root {
+    --text: #222;
+    --card: #fff;
+    --accent: #007bff;
+}
+body.dark {
+    --text: #eee;
+    --card: #1e1e1e;
+    --accent: #00bcd4;
+}
+body {
+    margin: 0;
+    font-family: sans-serif;
+    color: var(--text);
+    transition: background 1s ease;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+header {
+    width: 100%;
+    padding: 20px;
+    background: var(--card);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+h1 {
+    margin: 0;
+    text-align: center;
+    font-size: 1.8rem;
+}
+header button {
+    position: absolute;
+    right: 20px;
+    top: 90%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: var(--text);
+    cursor: pointer;
+}
+.conteudo {
+    padding: 40px;
+    text-align: center;
+    max-width: 600px;
+}

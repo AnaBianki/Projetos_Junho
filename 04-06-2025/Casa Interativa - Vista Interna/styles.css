@@ -1,0 +1,225 @@
+.casa {
+    position: relative;
+    width: 600px;
+    margin: 50px auto;
+    perspective: 1000px;
+}
+.telhado {
+    width: 600px;
+    height: 100px;
+    background-color: #8b4513;
+    transform: rotateX(45deg);
+    transform-origin: top;
+}
+.parede {
+    width: 600px;
+    height: 400px;
+    background-color: #f5deb3;
+    position: relative;
+    border: 10px solid #8b4513;
+}
+.janela {
+    width: 100px;
+    height: 100px;
+    background-color: #87ceeb;
+    position: absolute;
+    top: 50px;
+    border: 5px solid #8b4513;
+    overflow: hidden;
+}
+#janela1 {
+    left: 80px;
+}
+#janela2 {
+    right: 80px;
+}
+.cortina {
+    width: 100%;
+    height: 100%;
+    background-color: #964b00;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 0.5s;
+    transform: translateX(-100%);
+    opacity: 1;
+}
+#janela2 .cortina {
+    left: auto;
+    right: 0;
+    transform: translateX(100%);
+}
+.cortina.fechada {
+    transform: translateX(0) !important;
+}
+.janela.acesa {
+    background-color: #ffd700;
+    box-shadow: inset 0 0 20px #ffd700;
+}
+.porta {
+    width: 80px;
+    height: 160px;
+    background-color: #8b4513;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform-origin: right;
+    transition: transform 0.5s;
+}
+.porta.aberta {
+    transform: rotateY(-90deg);
+}
+.moveis {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.sofa {
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+    width: 200px;
+    height: 80px;
+    background-color: #4a90e2;
+    border-radius: 10px;
+}
+.mesa {
+    position: absolute;
+    bottom: 50px;
+    right: 150px;
+    width: 120px;
+    height: 120px;
+    background-color: #8b4513;
+    border-radius: 50%;
+}
+.abajur {
+    position: absolute;
+    top: -10px;
+    left: 30px;
+    width: 60px;
+    height: 80px;
+}
+.abajur-base {
+    position: absolute;
+    bottom: 0;
+    width: 20px;
+    height: 40px;
+    background-color: #696969;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.abajur-cupula {
+    position: absolute;
+    top: 0;
+    width: 60px;
+    height: 40px;
+    background-color: #deb887;
+    border-radius: 30px 30px 0 0;
+    transition: all 0.3s;
+}
+.abajur.aceso .abajur-cupula {
+    background-color: #fff5cc;
+    box-shadow: 0 0 20px rgba(255, 245, 204, 0.7);
+}
+.controles {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    padding: 10px;
+}
+.luz-teto{
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    width: calc(100% - 40px);
+    height: 10px;
+    background-color: #333;
+    border-radius: 5px;
+    transition: all 0.3s;
+    display: flex;
+    justify-content: space-between;
+}
+.luz-teto::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg,
+    #333 0%, #333 10%,
+    transparent 10%, transparent 20%,
+    #333 20%, #333 30%,
+    transparent 30%, transparent 40%,
+    #333 40%, #333 50%,
+    transparent 50%, transparent 60%,
+    #333 60%, #333 70%,
+    transparent 70%, transparent 80%,
+    #333 80%, #333 90%,
+    transparent 90%, transparent 100%
+    );
+}
+.luz-teto.acesa {
+    background-color: #fff5cc;
+    box-shadow: 0 0 20px #fff5cc;
+}
+.luz-teto.acesa::before {
+    background: linear-gradient((90deg,
+    #fff5cc 0%, #fff5cc 10%,
+    transparent 10%, transparent 20%,
+    #fff5cc 20%, #fff5cc 30%,
+    transparent 30%, transparent 40%,
+     #fff5cc 40%, #fff5cc 50%,
+    transparent 50%, transparent 60%,
+     #fff5cc 60%, #fff5cc 70%,
+    transparent 70%, transparent 80%,
+     #fff5cc 80%, #fff5cc 90%,
+    transparent 90%, transparent 100%,
+    ));
+}
+.tv {
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 90px;
+    background-color: #333;
+    border: 5px solid #000;
+    transition: all 0.3s;
+}
+.tv.ligada {
+    background-color: #4a90e2;
+    box-shadow: 0 0 20px rgba(74, 144, 226, 0.5);
+}
+.cortina {
+    width: 100%;
+    height: 100%;
+    background-color: #964b00;
+    opacity: 0;
+    transition: all 0.5s;
+}
+.cortina.fechada {
+    opacity: 0.8;
+}
+
+.controles {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+button {
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #565758;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+button:hover {
+    background-color: #cab816;
+    transform: scale(1.15);
+}

@@ -1,0 +1,63 @@
+:root {
+    --bg: #f0f0f0;
+    --card: #fff;
+    --text: #222;
+}
+body.dark {
+    --bg: #121212;
+    --card: #1e1e1e;
+    --text: #eee;
+}
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+header {
+    width: 100%;
+    padding: 20px;
+    background: var(--card);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+h1 {
+    margin: 0;
+}
+#toggleTheme {
+    background: none;
+    border: none;
+    font-size: 1.3rem;
+    color: var(--text);
+    cursor: pointer;
+}
+.container {
+    padding: 20px;
+}
+.tabuleiro {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 2px;
+    margin: 20px auto;
+    background: #ccc;
+}
+.peca {
+    width: 100px;
+    height: 100px;
+    background-image: url('/img/imagem.png');
+    background-size: 300px 300px;
+    cursor: pointer;
+    border: 1px solid #aaa;
+    box-sizing: border-box;
+}
+.peca.vazia {
+    background: transparent;
+    border: none;
+    cursor: default;
+}

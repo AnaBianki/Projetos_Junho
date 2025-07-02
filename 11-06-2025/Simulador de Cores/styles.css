@@ -1,0 +1,70 @@
+:root {
+    --bg: #f0f0f0;
+    --text: #222;
+    --card: #fff;
+}
+
+body.dark {
+    --bg: #121212;
+    --text: #eee;
+    --card: #1e1e1e; 
+}
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    transition: background 0.3s ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+header {
+    width: 100%;
+    padding: 20px;
+    background: var(--card);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    margin: 0;
+}
+
+#toggleTheme {
+    font-size: 1.2rem;
+    background: none;
+    border: none;
+    color: var(--text);
+    cursor: pointer;
+}
+
+.container {
+    margin-top: 50px;
+    text-align: center;
+}
+input {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    width: 250px;
+}
+
+button {
+    margin-left: 10px;
+    padding: 10px 15px;
+    font-size: 1rem;
+    background-color: var(--text);
+    color: var(--bg);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+#mensagem {
+    margin-top: 20px;
+    font-weight: bold;
+}

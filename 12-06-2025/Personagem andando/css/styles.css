@@ -1,0 +1,58 @@
+:root {
+    --bg: #e0f7fa;
+    --text: #222;
+    --chao: #26c6da;
+    --personagem: #ff6f00;
+}
+body.dark {
+    --bg: #121212;
+    --text: #eee;
+    --chao:#333;
+    --personagem: #ff9800;
+}
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    overflow: hidden;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+h1 {
+    margin: 0;
+}
+#toggleTheme {
+    font-size: 1.2rem;
+    background: none;
+    border: none;
+    color: var(--text);
+    cursor: pointer;
+}
+.cenario {
+    position: relative;
+    height: 700px;
+    background-image: url('/img/flores.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-top: 5px solid #999;
+    overflow: hidden;
+}
+.personagem {
+    position: absolute;
+    bottom: -200px;
+    left: 50px;
+    width: 400px;
+    height: 600px;
+    background-image: url('/img/borboleta.gif');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 10px;
+    transition: transform 0.1s linear;
+}

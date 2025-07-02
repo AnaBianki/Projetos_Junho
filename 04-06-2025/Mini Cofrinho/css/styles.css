@@ -1,0 +1,98 @@
+:root {
+    --bg: #f8f8f8;
+    --text: #222;
+    --card: #fff;
+    --accent: #4caf50;
+}
+
+body.dark {
+  --bg: #121212;
+    --text: #eee;
+    --card: #1e1e1e;
+    --accent: #00e676;  
+}
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+}
+
+.container {
+    max-width: 400px;
+    width: 100%;
+    background: var(--card);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    margin: 0;
+}
+
+#toggleTheme {
+    font-size: 1.3rem;
+    background: none;
+    border: none;
+    color: var(--text);
+    cursor: pointer;
+}
+
+form {
+    display: flex;
+    margin: 20px 0;
+    gap: 10px;
+}
+
+input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    background: var(--card);
+    color: var(--text);
+}
+
+button {
+    padding: 10px 15px;
+    background: var(--accent);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+.total {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 15px;
+}
+
+ul li {
+    background: #eee2;
+    padding: 8px 10px;
+    margin-bottom: 5px;
+    border-radius: 4px;
+    font-size: 0.95rem;
+}

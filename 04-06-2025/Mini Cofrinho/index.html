@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" 
+    content="width=device-width, initial-scale=1.0">
+    <title>Mini Cofrinho</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1> 🐷 Mini Cofrinho</h1>
+            <button id="toggleTheme">🌙</button>
+        </header>
+        <form id="formCofrinho">
+            <input type="number" id="valor"
+            step="0.01" placeholder="Digite um valor" required >
+            <button type="submit">Adicionar</button>
+        </form>
+        <div class="total">
+            💰 Total: R$ <span id="total">0.00</span>
+        </div>
+        <ul id="listaValores"></ul>
+        <button id="resetar">🗑️ Esvaziar Cofrinho</button>
+    </div>
+    <script src="/js/script.js"></script>
+</body>
+</html>
